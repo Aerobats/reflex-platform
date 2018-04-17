@@ -26,6 +26,7 @@ in self: super: {
 
   wai-websockets = haskellLib.appendConfigureFlag super.wai-websockets "-f-example";
   cryptonite = haskellLib.appendConfigureFlag super.cryptonite "-f-integer-gmp";
+  blaze-textual = haskellLib.appendConfigureFlag super.blaze-textual "-finteger-simple";
 
   profunctors = haskellLib.overrideCabal super.profunctors (drv: {
     preConfigure = ''
